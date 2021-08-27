@@ -1,0 +1,26 @@
+The decision tree for the input file given upto depth 1 finds the best split on column 4(if we are considering numbering the column from 1).
+For depth 2, we find that the best split for the data is that if it column 4 is true, we select column 6 for splitting the data again.
+Else, we find column 5 if the column 4 is False.
+
+If we get Column 4 false and column 5 as true the tree predicts B
+If we get Column 4 false and column 5 as false the tree predicts B
+If we get Column 4 true and column 6 as true the tree predicts B
+If we get Column 4 true and column 6 as false the tree predicts A
+
+
+Output from Console:
+
+for depth 1 best column for split:4
+for depth 2 best columns for split:5 and 6
+For column 4 true and column 6 true gives: B with count: 9
+For column 4 true and column 6 false gives: A with count: 40
+For column 4 false and column 5 false gives: B with count: 26
+For column 4 false and column 5 true gives: B with count: 90
+
+
+
+2.a.The error rate would :- 0.18
+b.The hypothesis weight of the first stump :-1.5163474893(ln((1-total Error)/total Error)
+c.Initial weight:1/200 (Length of coulmn)
+d.New weights of each correctly classified example:-0.01097
+Incorrectly classified example:- 0.005
